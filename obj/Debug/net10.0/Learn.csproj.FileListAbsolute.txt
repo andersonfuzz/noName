@@ -1,0 +1,14 @@
+C:\Users\ander\Documents\code\Learn\bin\Debug\net10.0\Learn.exe
+C:\Users\ander\Documents\code\Learn\bin\Debug\net10.0\Learn.deps.json
+C:\Users\ander\Documents\code\Learn\bin\Debug\net10.0\Learn.runtimeconfig.json
+C:\Users\ander\Documents\code\Learn\bin\Debug\net10.0\Learn.dll
+C:\Users\ander\Documents\code\Learn\bin\Debug\net10.0\Learn.pdb
+C:\Users\ander\Documents\code\Learn\obj\Debug\net10.0\Learn.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ander\Documents\code\Learn\obj\Debug\net10.0\Learn.AssemblyInfoInputs.cache
+C:\Users\ander\Documents\code\Learn\obj\Debug\net10.0\Learn.AssemblyInfo.cs
+C:\Users\ander\Documents\code\Learn\obj\Debug\net10.0\Learn.csproj.CoreCompileInputs.cache
+C:\Users\ander\Documents\code\Learn\obj\Debug\net10.0\Learn.dll
+C:\Users\ander\Documents\code\Learn\obj\Debug\net10.0\refint\Learn.dll
+C:\Users\ander\Documents\code\Learn\obj\Debug\net10.0\Learn.pdb
+C:\Users\ander\Documents\code\Learn\obj\Debug\net10.0\Learn.genruntimeconfig.cache
+C:\Users\ander\Documents\code\Learn\obj\Debug\net10.0\ref\Learn.dll
