@@ -1,119 +1,68 @@
-﻿/*A matriz ourAnimals inclui as seguintes "características de animal de estimação" para cada animal:
+﻿//Crie um array de 5 nomes de frutas e imprima cada um usando for e foreach.
+string[] frutas = ["uva", "banana", "maçã", "pera", "graviola"];
 
-ID do animal de estimação #.
-Espécies de animais de estimação (gato ou cachorro).
-Idade do animal de estimação (anos).
-Uma descrição das características/condição física do animal de estimação.
-Uma descrição da personalidade do animal de estimação.
-O apelido do animal de estimação.*/
-bool vagaEncontrada = false;
-string[,] ourAnimals = new string[8, 6];
-//primeira dimensão anuimal,segunda dimensão característica
-
-for (int i = 0; i < 8; i++)
+foreach (string item in frutas)
 {
-    if (i == 0)
-    {
-        ourAnimals[i, 0] = "ID #: C1";
-        ourAnimals[i, 1] = "cachorro";
-        ourAnimals[i, 2] = "2";
-        ourAnimals[i, 3] = "porte médio marron";
-        ourAnimals[i, 4] = "brincalhão";
-        ourAnimals[i, 5] = "Rex";
-    }
-    else if (i == 1)
-    {
-        ourAnimals[i, 0] = "ID #: G1";
-        ourAnimals[i, 1] = "gato";
-        ourAnimals[i, 2] = "1";
-        ourAnimals[i, 3] = "pequeno branco";
-        ourAnimals[i, 4] = "calmo";
-        ourAnimals[i, 5] = "Mimi";
-
-    }
-    else
-        ourAnimals[i, 0] = "";
-    ourAnimals[i, 1] = "";
-    ourAnimals[i, 2] = "";
-    ourAnimals[i, 3] = "";
-    ourAnimals[i, 4] = "";
-    ourAnimals[i, 5] = "";
-    {
-
-    }
+    Console.WriteLine(item);
+}
+Console.WriteLine("-------------------");
+for (int i = 0; i < frutas.Length; i++)
+{
+    Console.WriteLine(frutas[i]);
 
 }
-string menuSelection = "";
+//Crie um array 2D que armazene 3 alunos e 2 notas (matriz 3x2). Calcule a média de cada aluno.
 
-while (menuSelection != "Sair")
+string[,] array2D = new string[3, 3];
+
+array2D[0, 0] = "Anderson";
+array2D[0, 1] = "7";
+array2D[0, 2] = "9";
+
+array2D[1, 0] = "Soares";
+array2D[1, 1] = "6";
+array2D[1, 2] = "5";
+
+
+array2D[2, 0] = "Andrade";
+array2D[2, 1] = "10";
+array2D[2, 2] = "6";
+
+
+for (int i = 0; i < array2D.GetLength(0); i++)
 {
-    Console.WriteLine("1. Listar todos os animais de estimação");
-    Console.WriteLine("2. Adicionar novo animal de estimação");
-    Console.WriteLine("3. Digite 'Sair' para encerrar");
+    double nota1 = double.Parse(array2D[i, 1]);
+    double nota2 = double.Parse(array2D[i, 2]);
 
-    menuSelection = Console.ReadLine();
+    double media = (nota1 + nota2) / 2;
 
-    if (menuSelection == "1")
-    {
-        for (int i = 0; i < 8; i++)
-        {
-            if (!string.IsNullOrEmpty(ourAnimals[i, 0]))
-            {
-                Console.WriteLine($"ID: {ourAnimals[i, 0]}");
-                Console.WriteLine($"Espécie: {ourAnimals[i, 1]}");
-                Console.WriteLine($"Idade: {ourAnimals[i, 2]} anos");
-                Console.WriteLine($"Características: {ourAnimals[i, 3]}");
-                Console.WriteLine($"Personalidade: {ourAnimals[i, 4]}");
-                Console.WriteLine($"Apelido: {ourAnimals[i, 5]}");
-                Console.WriteLine("-----------------------------");
-            }
-        }
 
-    }
-    else if (menuSelection == "2")
-    {
-        for (int i = 0; i < 8; i++)
-        {
-            if (String.IsNullOrEmpty(ourAnimals[i, 0])) { }
-            Console.WriteLine("Adicionando novo animal de estimação...");
+    Console.WriteLine($"{array2D[i, 0]} - Nota 1: {nota1} - Nota 2: {nota2} - Média: {media}");
 
-            vagaEncontrada = true;
-
-            ourAnimals[i, 0] = "ID #" + (i + 1);
-
-            string especie = "";
-            while (especie != "gato" && especie != "cachorro")
-            {
-                Console.Write("Espécie (gato ou cachorro): ");
-                especie = Console.ReadLine().ToLower();
-                if (especie != "gato" && especie != "cachorro")
-                {
-                    Console.WriteLine("Espécie inválida. Por favor, digite 'gato' ou 'cachorro'.");
-                }
-            }
-            ourAnimals[i, 1] = especie;
-            
-            Console.Write("Idade: ");
-            ourAnimals[i, 2] = Console.ReadLine();
-
-            Console.Write("Descrição física: ");
-            ourAnimals[i, 3] = Console.ReadLine();
-
-            Console.Write("Personalidade: ");
-            ourAnimals[i, 4] = Console.ReadLine();
-
-            Console.Write("Apelido: ");
-            ourAnimals[i, 5] = Console.ReadLine();
-
-            break;
-        }
-        if (!vagaEncontrada)
-        {
-            
-        }
-    }
-    else if (menuSelection != "Sair")
-    {
-        Console.WriteLine("Opção inválida. Por favor, escolha uma opção válida.");
-    }
 }
+//Transforme o array de frutas em uma List<string> e adicione mais 3 frutas. Imprima todas.
+List<string> frutasList = new List<string>();
+
+foreach (string item in frutas)
+{
+    frutasList.Add(item);
+}
+foreach (var item in frutasList)
+{
+    Console.WriteLine(item);
+}
+
+//Exercício bônus: peça para o usuário digitar nomes de pessoas até digitar “sair” e armazene em uma lista.
+List<string> nomes = new List<string>();
+string input = "";
+Console.WriteLine("Digite um nome (ou 'sair' para encerrar): ");
+do
+{
+    input = Console.ReadLine();
+    if (input.ToLower() != "sair")
+    {
+        nomes.Add(input);
+    }
+
+
+} while (input.ToLower() != "sair");
